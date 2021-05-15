@@ -10,9 +10,9 @@ const Home = () => {
     const data = useSelector(state => state.app.data)
 
     const fetchData = () => {
-        axios.get("https://api-009.herokuapp.com/food")
+        axios.get(process.env.REACT_APP_DATABASE_URL)
         .then((res) => {
-            let data = res.data
+            let data = res.data.data
             dispatch(getData(data))
         })
     }

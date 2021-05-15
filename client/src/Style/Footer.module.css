@@ -1,0 +1,41 @@
+.wrapper {
+    background-color: #ECEFF1;
+}
+
+.footerHeader {
+    padding-left: 70px;
+}
+
+.footerText {
+    color: #424242;
+    padding: 5px 0px;
+    /* padding-left: 70px; */
+}
+
+.footerText:hover {
+    color: #292929;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.blackLogo {
+    margin: 0px 180px;
+    width: 300px;
+}
+
+.socialLink {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.appLink {
+    width: 150px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.declaration {
+    color: #424242;
+    padding: 60px 100px;
+}

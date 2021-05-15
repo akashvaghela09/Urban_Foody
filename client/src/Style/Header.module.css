@@ -1,0 +1,9 @@
+.wrapper {
+    background-color: #FF0000;
+    padding: 0px 30px;
+}
+
+.banner {
+    cursor: pointer;
+    width: 300px;
+}
