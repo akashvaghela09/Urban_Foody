@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Admin } from '../Components/Admin';
 import { Cart } from '../Components/Cart';
-import { HomePage } from "../Components/HomePage"
+import { ChinesePage } from '../Components/Pages/ChinesePage';
+import { ExplorePage } from '../Components/Pages/ExplorePage';
+import { HomePage } from '../Components/Pages/HomePage';
+import { PizzaPage } from '../Components/Pages/PizzaPage';
 
 const Allroutes = () => {
     return (
         <div>
-            {/* <Link to="/cart">Cart</Link><br/>
-            <Link to="/">HomePage</Link><br/>
-            <Link to="/admin">Admin</Link> */}
             <Switch>
                 <Route exact path="/">
                     <HomePage />
@@ -19,6 +19,15 @@ const Allroutes = () => {
                 </Route>
                 <Route exact path="/admin">
                     <Admin />
+                </Route>
+                <Route exact path="/explore">
+                    <ExplorePage />
+                </Route>
+                <Route exact path="/pizza">
+                    <PizzaPage />
+                </Route>
+                <Route exact path="/chinese">
+                    <ChinesePage />
                 </Route>
             </Switch>
         </div>

@@ -44,9 +44,9 @@ const Header = () => {
                 {
                     isAuth && 
                     <Grid container justify="flex-end" md={12} xs={12}>
-                        <Typography variant="p" className={styles.menuItems}>Chinese</Typography>
-                        <Typography variant="p" className={styles.menuItems}>Pizza</Typography>
-                        <Typography variant="p" className={styles.menuItems}>Explore</Typography>
+                        <Typography variant="p" className={styles.menuItems} onClick={() => history.push("/chinese")}>Chinese</Typography>
+                        <Typography variant="p" className={styles.menuItems} onClick={() => history.push("/pizza")}>Pizza</Typography>
+                        <Typography variant="p" className={styles.menuItems} onClick={() => history.push("/explore")}>Explore</Typography>
                         <Grid className={styles.menuIconDiv}>
                             <ShoppingCartIcon className={styles.menuIcon}/>
                             <Box className={styles.countDiv}>

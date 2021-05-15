@@ -1,10 +1,9 @@
 import React from 'react';
 import { Grid, makeStyles, TextField, Typography } from '@material-ui/core';
-import styles from "../Style/HomePage.module.css";
-import { SearchBar } from './SearchBar';
+import styles from "../../Style/HomePage.module.css";
+import { SearchBar } from '../SearchBar';
 const useStyles = makeStyles(() => ({
     searchGrid: {
-        // backgroundImage: 'url(' + bgImage + ')'
     }
   }));
 
