@@ -11,7 +11,9 @@ const initialState = {
     data: [],
     cart: [],
     cartItemList: [],
-    totalPrice: 0
+    totalPrice: 0,
+    isAuth: true,
+    count: 4
 }
 
 const reducer = (state = initialState, {type, payload}) => {

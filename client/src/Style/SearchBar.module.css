@@ -1,0 +1,76 @@
+.mainWrapper {
+    position: relative;
+}
+
+.foodImg {
+    width: 100%;
+    min-height: 500px;
+    filter: brightness(0.5);
+}
+
+.searchDiv {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    /* margin: 10px; */
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.heading {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.searchbar {
+    /* width: 60%; */
+    padding: 20px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+}
+
+.searchCard {
+    width: 300px;
+    display: flex;
+    margin: 10px;
+    padding: 0px 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.resImg {
+    width: 50px;
+    margin: 10px;
+}
+
+.resName {
+    margin-top: 10px;
+}
+
+.searchResDiv {
+    margin-top: 20px;
+    height: 290px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: rgb(216, 216, 216);
+}
+
+.closeBtn {
+    color: gray;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.inputDiv {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+}

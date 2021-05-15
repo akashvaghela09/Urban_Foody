@@ -7,3 +7,42 @@
     cursor: pointer;
     width: 300px;
 }
+
+.menuItems {
+    color: white;
+    padding: 10px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menuIconDiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    margin: 0px 10px;
+}
+
+.menuIcon {
+    color: white;
+    cursor: pointer;
+}
+
+.countDiv {
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    font-size: 15px;
+}
