@@ -48,7 +48,7 @@ const Header = () => {
                         <Typography variant="p" className={styles.menuItems} onClick={() => history.push("/pizza")}>Pizza</Typography>
                         <Typography variant="p" className={styles.menuItems} onClick={() => history.push("/explore")}>Explore</Typography>
                         <Grid className={styles.menuIconDiv}>
-                            <ShoppingCartIcon className={styles.menuIcon}/>
+                            <ShoppingCartIcon onClick={() => history.push("/cart")} className={styles.menuIcon}/>
                             <Box className={styles.countDiv}>
                                 <Typography variant="p" className={styles.count}>{count}</Typography>
                             </Box>

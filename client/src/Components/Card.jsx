@@ -1,20 +1,43 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { sendToCart, setTotalPrice } from '../Redux/app/action';
+import { sendToCart, setCartItems, setTotalPrice } from '../Redux/app/action';
 import style from "../Style/Home.module.css"
+import { Button, Grid, makeStyles, TextField, Typography } from '@material-ui/core';
+import StarIcon from '@material-ui/icons/Star';
+const useStyles = makeStyles(() => ({
+    addBtn: {
+      backgroundColor: "red",
+      color: "white",
+      "&:hover ": {
+          backgroundColor: "rgb(206, 0, 0)",
+          color: "white"
+      }
+    },
+    starIcon: {
+        fontSize: "20px",
+        color: "gold"
+    }
+  }));
 
 const Card = ({data}) => {
-    const {id, name, img_url, price} = data
+    const classes = useStyles();
+    const {_id, name, img_url, price, rating, reviews} = data
     const dispatch = useDispatch()
     const cart = useSelector(state => state.app.cart)
     const totalPrice = useSelector(state => state.app.totalPrice)
     const [add, setAdded] = useState(false)
+    let starArray = []
+    for(let i = 0; i < Math.ceil(rating); i++){
+        starArray.push("star")
+    }
 
     const addToCart = () => {
         let flag = false;
         setAdded(true)
+
+        // check if item exist or not
         for(let i = 0; i < cart.length; i++){
-            if(cart[i].id === id){
+            if(cart[i]._id === _id){
                 flag = true
                 break;
             }
@@ -26,19 +49,31 @@ const Card = ({data}) => {
             dispatch(setTotalPrice(newTotalPrice))
         }
 
-        console.log(cart);
+        // console.log(cart);
+        // console.log(rating);
     }
     return (
-        <div className={style.card}>
-            <h4>Name : {name}</h4>
-            <img src={img_url} width="200px" alt="food"/>
-            <div>
+        <Grid container md={2} sm={5} xs={7} direction="column" alignItems="flex-start" className={style.cardGrid}>
+            <img className={style.cardImg} src={img_url}  alt="food"/>
+            <Typography className={style.cardText} variant="h6"><b>{name}</b></Typography>
+            <Grid container direction="row" alignItems="center" style={{margin: "0px 10px"}}>
                 {
-                    !add ? <button onClick={addToCart}>ADD</button> : <button>Item Added</button>
+                    starArray && starArray.map((el) => <StarIcon className={classes.starIcon} />)
                 }
-            </div>
-
-        </div>
+                <Typography style={{margin:"0px 3px"}}>{rating}</Typography>
+                <Typography variant="p" className={style.reviewsText}>({reviews} Reviews)</Typography>
+            </Grid>
+            <Grid container direction="row" alignItems="center" justify="space-between">
+                <Typography className={style.cardText} variant="h6">₹ {price}</Typography>
+            </Grid>
+            {
+            }
+            <Grid container justify="center">
+                {
+                    !add ? <Button className={classes.addBtn} variant="contained" color="red" onClick={addToCart}>ADD</Button > : <Button className={classes.addBtn} variant="contained" color="red">Added</Button >
+                }
+            </Grid>
+        </Grid>
     )
 }
 

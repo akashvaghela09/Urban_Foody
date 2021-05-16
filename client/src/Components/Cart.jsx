@@ -6,7 +6,6 @@ const Cart = () => {
 
     const cart = useSelector(state => state.app.cart)
     const totalPrice = useSelector(state => state.app.totalPrice)
-
     const handleCheck = () => {
         console.log(cart);
     }

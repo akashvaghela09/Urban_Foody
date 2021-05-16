@@ -11,3 +11,38 @@
     margin: 20px;
     padding: 10px;
 }
+
+.cardGrid {
+    border: 1px solid #ced6e0;
+    background-color: white;
+    margin: 30px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    box-shadow: 3px 9px 12px -4px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 3px 9px 12px -4px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 9px 12px -4px rgba(0,0,0,0.51);
+}
+
+.cardImg {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.addBtn {
+    background-color: red;
+    color: white;
+}
+
+.addBtn:hover {
+    background-color: rgb(206, 0, 0);
+}
+
+.cardText {
+    padding-left: 10px ;
+}
+
+.reviewsText {
+    font-size: 12px;
+    color: rgb(129, 129, 129);
+    padding: 0px;
+}
