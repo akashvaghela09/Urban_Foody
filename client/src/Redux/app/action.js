@@ -1,6 +1,8 @@
 import { GET_DATA, 
     SEND_TO_CART, 
     SET_CART_ITEMS,
+    SET_LOGIN,
+    SET_TOTAL_ITEM_COUNT,
     SET_TOTAL_PRICE
 } from "./actionType"
 
@@ -10,7 +12,6 @@ const getData = (payload) => {
         payload
     }
 }
-
 
 const sendToCart = (payload) => {
     return {
@@ -33,9 +34,25 @@ const setTotalPrice = (payload) => {
     }
 }
 
+const setTotalItemCount = (payload) => {
+    return {
+        type: SET_TOTAL_ITEM_COUNT,
+        payload
+    }
+}
+
+const setLogin = (payload) => {
+    return {
+        type: SET_LOGIN,
+        payload
+    }
+}
+
 export { 
     getData,
     sendToCart,
     setCartItems,
-    setTotalPrice
+    setTotalPrice,
+    setTotalItemCount,
+    setLogin
 }

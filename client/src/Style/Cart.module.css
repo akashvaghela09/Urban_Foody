@@ -1,0 +1,61 @@
+.cartCard {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    border-radius: 5px;
+    background-color: white;
+    width: 88%;
+}
+
+.cardImgDiv {
+    width: 30%;
+}
+
+.cardImg {
+    width: 100%;
+    margin: 0px;
+}
+
+.cardInfoDiv {
+    padding: 8px;
+    /* width: 30%; */
+}
+
+.foodName {
+    font-size: 20px;
+}
+
+.foodPrice {
+    font-size: 18px;
+}
+
+.btnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+
+.cartBtn {
+    padding: 5px;
+}
+
+.itemCount {
+    margin: 0px 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.totalAmount {
+    background-color: #ECEFF1;
+    padding: 15px 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.placeOrder {
+    background-color: red;
+    color: blanchedalmond;
+    margin-top: 50px;
+}

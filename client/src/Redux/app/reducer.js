@@ -2,6 +2,8 @@ import {
     GET_DATA,
     SEND_TO_CART,
     SET_CART_ITEMS,
+    SET_LOGIN,
+    SET_TOTAL_ITEM_COUNT,
     SET_TOTAL_PRICE
 } from './actionType'
 
@@ -12,8 +14,8 @@ const initialState = {
     cart: [],
     cartItemList: [],
     totalPrice: 0,
-    isAuth: true,
-    count: 4
+    isAuth: false,
+    count: 0
 }
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -39,6 +41,16 @@ const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 totalPrice: payload
+            }
+        case SET_TOTAL_ITEM_COUNT:
+            return {
+                ...state,
+                count: payload
+            }
+        case SET_LOGIN:
+            return {
+                ...state,
+                isAuth: payload
             }
         default:
             return state

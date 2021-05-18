@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { sendToCart, setCartItems, setTotalPrice } from '../Redux/app/action';
+import { sendToCart, setTotalItemCount, setTotalPrice } from '../Redux/app/action';
 import style from "../Style/Home.module.css"
-import { Button, Grid, makeStyles, TextField, Typography } from '@material-ui/core';
+import { Button, Grid, makeStyles, Typography } from '@material-ui/core';
 import StarIcon from '@material-ui/icons/Star';
 const useStyles = makeStyles(() => ({
     addBtn: {
@@ -24,6 +24,7 @@ const Card = ({data}) => {
     const {_id, name, img_url, price, rating, reviews} = data
     const dispatch = useDispatch()
     const cart = useSelector(state => state.app.cart)
+    const count = useSelector(state => state.app.count)
     const totalPrice = useSelector(state => state.app.totalPrice)
     const [add, setAdded] = useState(false)
     let starArray = []
@@ -43,14 +44,13 @@ const Card = ({data}) => {
             }
         }
 
+        // if item con exist then add to cart, increase item count, set new total price
         if(flag === false){
             dispatch(sendToCart([...cart, data]))
+            dispatch(setTotalItemCount(count + 1))
             let newTotalPrice = totalPrice + price
             dispatch(setTotalPrice(newTotalPrice))
         }
-
-        // console.log(cart);
-        // console.log(rating);
     }
     return (
         <Grid container md={2} sm={5} xs={7} direction="column" alignItems="flex-start" className={style.cardGrid}>

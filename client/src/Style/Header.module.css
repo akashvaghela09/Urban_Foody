@@ -1,9 +1,9 @@
 .wrapper {
     background-color: #FF0000;
-    padding: 0px 30px;
+    padding: 0px 20px;
     position: sticky;
     top: 0px;
-    z-index: 10000;
+    z-index: 100;
 }
 
 .banner {
@@ -48,4 +48,15 @@
 
 .count {
     font-size: 15px;
+}
+
+.cartStrip {
+    background-color: red;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 10px 0px;
+    width: 100%;
 }
